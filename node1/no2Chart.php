@@ -26,7 +26,6 @@
 	NO2Chart = Highcharts.stockChart('no2_chart', {
 	    chart: {
 	        events: {
-	            load: requestData
 	        }
 	    },
 	    rangeSelector: {

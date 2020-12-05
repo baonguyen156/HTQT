@@ -23,7 +23,7 @@
 	}
 	});
 
-	function requestData() {
+	setInterval(function requestData() {
         $.ajax({
             url: 'getso2.php',
             success: function(point) {
@@ -36,6 +36,7 @@
             },
             cache: false
         });
+<<<<<<< HEAD
 		// $.ajax({
         //     url: 'getppm10.php',
         //     success: function(point) {
@@ -66,10 +67,13 @@
 		setInterval(requestData, 10000);
 
     }
+=======
+		// setInterval(requestData, 5000);
+    }, 2000);
+>>>>>>> 5d64c4782ea8dc1199ab25f79de0a28c5ede5580
 	const SO2Chart = Highcharts.stockChart('so2_chart', {
 	    chart: {
 	        events: {
-	            load: requestData
 	        }
 	    },
 	    rangeSelector: {

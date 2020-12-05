@@ -23,22 +23,9 @@
 	}
 	});
 	var ppm25Chart;
-	function requestData() {
-        $.ajax({
-            url: 'get.php',
-            success: function(point) {
-                var series = ppm25Chart.series[0];
-                var x = (new Date()).getTime();
-                ppm25Chart.series[0].addPoint([x,point[1]], true, true);
-                setTimeout(requestData, 2000);    
-            },
-            cache: false
-        });
-    }
 	ppm25Chart = Highcharts.stockChart('ppm25_chart', {
 	    chart: {
 	        events: {
-	            load: requestData
 	        }
 	    },
 	    rangeSelector: {
