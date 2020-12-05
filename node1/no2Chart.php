@@ -23,18 +23,6 @@
 	}
 	});
 	var NO2Chart;
-	function requestData() {
-        $.ajax({
-            url: 'getno2.php',
-            success: function(point) {
-                var series = NO2Chart.series[0];
-                var x = (new Date()).getTime();
-                NO2Chart.series[0].addPoint([x,point[1]], true, true);
-                setInterval(requestData, 2000);    
-            },
-            cache: false
-        });
-    }
 	NO2Chart = Highcharts.stockChart('no2_chart', {
 	    chart: {
 	        events: {

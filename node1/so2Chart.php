@@ -63,7 +63,7 @@
         //     },
         //     cache: false
         // });
-		setInterval(requestData, 5000);
+		setInterval(requestData, 10000);
 
     }
 	const SO2Chart = Highcharts.stockChart('so2_chart', {

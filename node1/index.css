@@ -29,13 +29,13 @@
 #wrapper{
         width: 1000px;
         margin: auto;
-        height: 300px;
+        height: 200px;
     }
 #wrap_main{
         width:1000px;
-        height: 300px;
+        height: 200px;
         margin: auto;
-        font-size: 12px;
+        font-size: 18px;
         
        }
 .tr,td{

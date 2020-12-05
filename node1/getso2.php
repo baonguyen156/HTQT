@@ -20,7 +20,8 @@ $y = rand(0, 100);*/
 		}
 	}
     // Create a PHP array and echo it as JSON
-    $ret = array($x, $y, $z, $a, $b);
+	$ret = array($x, $y, $z, $a, $b);
+	mysqli_close($link);
     //echo $ret;
     echo json_encode($ret);
 ?>

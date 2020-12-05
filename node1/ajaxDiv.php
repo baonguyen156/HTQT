@@ -12,7 +12,7 @@
 	$result = mysqli_query($link,$query) or die (mysqli_error($link));
 	if (mysqli_num_rows($result) > 0)
 	{
-		echo "<center><h2>Value Table: </h2><p><table align='center' border=1 cellspacing=2 cellpadding='4'>";
+		echo "<center><h2>Value Table: </h2><p><table align='center' border=1 cellspacing=2 cellpadding='6'>";
         echo "<tr><td><h4>ID</h4></td>
                 <td><h4>Temperature</h4></td>
 				<td><h4>Humidity</h4></td>
