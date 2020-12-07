@@ -36,41 +36,8 @@
             },
             cache: false
         });
-<<<<<<< HEAD
-		// $.ajax({
-        //     url: 'getppm10.php',
-        //     success: function(point) {
-        //         let series = ppm10Chart.series[0];
-        //         let x = (new Date()).getTime();
-        //         ppm10Chart.series[0].addPoint([x,point[1]], true, true);
-        //     },
-        //     cache: false
-        // });
-		// $.ajax({
-        //     url: 'get.php',
-        //     success: function(point) {
-        //         let series = ppm25Chart.series[0];
-        //         let x = (new Date()).getTime();
-        //         ppm25Chart.series[0].addPoint([x,point[1]], true, true);
-        //     },
-        //     cache: false
-        // });
-		// $.ajax({
-        //     url: 'getco.php',
-        //     success: function(point) {
-        //         var series = COChart.series[0];
-        //         var x = (new Date()).getTime();
-        //         COChart.series[0].addPoint([x,point[1]], true, true);
-        //     },
-        //     cache: false
-        // });
-		setInterval(requestData, 10000);
-
-    }
-=======
 		// setInterval(requestData, 5000);
     }, 2000);
->>>>>>> 5d64c4782ea8dc1199ab25f79de0a28c5ede5580
 	const SO2Chart = Highcharts.stockChart('so2_chart', {
 	    chart: {
 	        events: {
