@@ -52,9 +52,13 @@
 					
 
 					$status = 1;
-
+					
 					if ($ssso2 < $minSO2) {
-						echo "<p style='color:green'>SO<sub>2</sub>=$ssso2</p>";
+						echo "<div class='row'>
+						<div class='col'><p style='color:green'>SO<sub>2</sub>=$ssso2</p></div>
+						
+					  	</div>";
+						// echo "<p style='color:green'>SO<sub>2</sub>=$ssso2</p>";
 						$so2lv = 0;
 					}
 					elseif ($ssso2 >= $minSO2 && $ssso2 < $maxSO2 ){
@@ -108,9 +112,10 @@
 					if ($so2lv < $status && $no2lv < $status && $colv < $status && $pm25lv < $status){
 						echo "<p style='color:green'>Tình trạng không khí bình thường</p>";
 					}
-					elseif ($so2lv > $status || $no2lv > $status || $colv > $status || $pm25lv > $status ) {						
-						echo "<p style='color:red'>Tình trạng không khí ở mức nguy hiem</p>";
-						echo "level 2";	
+					elseif ($so2lv > $status || $no2lv > $status || $colv > $status || $pm25lv > $status ) {										
+						echo "<div class='alert alert-danger'>
+								<strong>Danger!</strong>
+					 		</div>";
 						echo "<audio controls autoplay><source src=\"sound.mp3\" type=\"audio/mpeg\"></audio>";					
 					}
 					elseif ($so2lv = $status || $no2lv = $status || $colv = $status || $pm25lv = $status) {
