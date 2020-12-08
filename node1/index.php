@@ -18,13 +18,14 @@
 		table {
 			font-family: arial, sans-serif;
 			border-collapse: collapse;
-			width: 80%;
+			
 		}
 
 		td,
 		th {
-
+			
 			text-align: center;
+			font-size: 14px;
 
 		}
 

@@ -12,13 +12,13 @@
 	$result = mysqli_query($link,$query) or die (mysqli_error($link));
 	if (mysqli_num_rows($result) > 0)
 	{
-		echo "<center><h2>Value Table: </h2><p><table align='center' border=1 cellspacing=2 cellpadding='6'>";
+		echo "<center><h2>Value Table: </h2><p><table style='width:80% align='center' border=1 cellspacing=2 cellpadding='6'>";
         echo "<tr><td><h4>ID</h4></td>
-                <td><h4>Temperature</h4></td>
-				<td><h4>Humidity</h4></td>
-				<td><h4>Light Intensive</h4></td>
-				<td><h4>Atmosphere</h4></td>
-				<td><h4>Noise</h4></td>
+                <td><h4>Temperature (&ordm;C)</h4></td>
+				<td><h4>Humidity (%)</h4></td>
+				<td><h4>Light Intensive (Lux)</h4></td>
+				<td><h4>Atmosphere (Pa)</h4></td>
+				<td><h4>Noise (dB)</h4></td>
 				<td><h4>PM2.5</h4></td>
                 <td><h4>SO<sub>2</sub></h4></td>
                 <td><h4>NO<sub>2</sub></h4></td>
