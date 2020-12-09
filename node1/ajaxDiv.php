@@ -83,83 +83,123 @@
 					}														
 					$status = 1;
 
-					if ($ssso2 < $minSO2) {
-						// echo "<div class='row'>
-						// <div class='col'><p style='color:green'>SO<sub>2</sub>=$ssso2</p></div>
+					// if ($ssso2 < $minSO2) {
+					// 	// echo "<div class='row'>
+					// 	// <div class='col'><p style='color:green'>SO<sub>2</sub>=$ssso2</p></div>
 						
-					  	// </div>";
-						// echo "<p style='color:green'>SO<sub>2</sub>=$ssso2</p>";
-						$so2lv = 0;
-					}
-					elseif ($ssso2 >= $minSO2 && $ssso2 < $maxSO2 ){
-						// echo "<p style='color:orange'>SO<sub>2</sub>=$ssso2</p>";
-						$so2lv = 1;
-					}
-					else {
-						// echo "<p style='color:red'>SO<sub>2</sub>=$ssso2</p>";
-						$so2lv = 2;
-					}
-					// no2
-					if ($ssno2 < $minNO2) { 
-						// echo "<p style='color:green'>NO<sub>2</sub>=$ssno2</p>";
-						$no2lv = 0;
-					}
-					elseif ($ssno2 >= $minNO2 && $ssno2 < $maxNO2 ){
-						// echo "<p style='color:orange'>NO<sub>2</sub>=$ssno2</p>";
-						$no2lv = 1;
-					}
-					else {
-						// echo "<p style='color:red'>NO<sub>2</sub>=$ssno2</p>";
-						$no2lv = 2;
-					}
-					// co
-					if ($ssco < $minCO) {
-						// echo "<p style='color:green'>CO=$ssco</p>";
-						$colv = 0;
-					}
-					elseif ($ssco >= $minCO && $ssco < $maxCO ){
-						// echo "<p style='color:orange'>CO=$ssco</p>";
-						$colv = 1;
-					}
-					else {
-						// echo "<p style='color:red'>CO=$ssco</p>";
-						$colv = 2;
-					}
-					// ppm2.5
-					if ($ssppm25 < $minPPM25) {
-						// echo "<p style='color:green'>PPM2.5=$ssppm25</p>";
-						$pm25lv = 0;
-					}
-					elseif ($ssppm25 >= $minPPM25 && $ssppm25 < $maxPPM25 ){
-						// echo "<p style='color:orange'>PPM2.5=$ssppm25</p>";
-						$pm25lv = 1;
-					}
-					else {
-						// echo "<p style='color:red'>PPM2.5=$ssppm25</p>";
-						$pm25lv = 2;
-					}
+					//   	// </div>";
+					// 	// echo "<p style='color:green'>SO<sub>2</sub>=$ssso2</p>";
+					// 	$so2lv = 0;
+					// }
+					// elseif ($ssso2 >= $minSO2 && $ssso2 < $maxSO2 ){
+					// 	// echo "<p style='color:orange'>SO<sub>2</sub>=$ssso2</p>";
+					// 	$so2lv = 1;
+					// }
+					// else {
+					// 	// echo "<p style='color:red'>SO<sub>2</sub>=$ssso2</p>";
+					// 	$so2lv = 2;
+					// }
+					// // no2
+					// if ($ssno2 < $minNO2) { 
+					// 	// echo "<p style='color:green'>NO<sub>2</sub>=$ssno2</p>";
+					// 	$no2lv = 0;
+					// }
+					// elseif ($ssno2 >= $minNO2 && $ssno2 < $maxNO2 ){
+					// 	// echo "<p style='color:orange'>NO<sub>2</sub>=$ssno2</p>";
+					// 	$no2lv = 1;
+					// }
+					// else {
+					// 	// echo "<p style='color:red'>NO<sub>2</sub>=$ssno2</p>";
+					// 	$no2lv = 2;
+					// }
+					// // co
+					// if ($ssco < $minCO) {
+					// 	// echo "<p style='color:green'>CO=$ssco</p>";
+					// 	$colv = 0;
+					// }
+					// elseif ($ssco >= $minCO && $ssco < $maxCO ){
+					// 	// echo "<p style='color:orange'>CO=$ssco</p>";
+					// 	$colv = 1;
+					// }
+					// else {
+					// 	// echo "<p style='color:red'>CO=$ssco</p>";
+					// 	$colv = 2;
+					// }
+					// // ppm2.5
+					// if ($ssppm25 < $minPPM25) {
+					// 	// echo "<p style='color:green'>PPM2.5=$ssppm25</p>";
+					// 	$pm25lv = 0;
+					// }
+					// elseif ($ssppm25 >= $minPPM25 && $ssppm25 < $maxPPM25 ){
+					// 	// echo "<p style='color:orange'>PPM2.5=$ssppm25</p>";
+					// 	$pm25lv = 1;
+					// }
+					// else {
+					// 	// echo "<p style='color:red'>PPM2.5=$ssppm25</p>";
+					// 	$pm25lv = 2;
+					// }
 					// ppm10
-					if ($so2lv < $status && $no2lv < $status && $colv < $status && $pm25lv < $status){
-						echo "<div class='alert alert-success'>
-								<p style='color:green'><span class='glyphicon glyphicon-cloud'> </span><strong>Fresh Air !</strong></p> 
-					 		</div>";
-					}
-					elseif ($so2lv > $status || $no2lv > $status || $colv > $status || $pm25lv > $status ) {										
-						echo "<div class='alert alert-danger'>
-							<span class='glyphicon glyphicon-alert'></span> <strong>Danger!</strong>
-							<audio controls autoplay><source src=\"sound.mp3\" type=\"audio/mpeg\"></audio>
-					 		</div>";
-						// echo "<audio controls resume><source src=\"sound.mp3\" type=\"audio/mpeg\"></audio>";					
-					}
-					elseif ($so2lv = $status || $no2lv = $status || $colv = $status || $pm25lv = $status) {
-						if ($so2lv <= $status && $no2lv <= $status && $colv <= $status && $pm25lv <= $status) {
+					// if ($so2lv < $status && $no2lv < $status && $colv < $status && $pm25lv < $status){
+					// 	echo "<div class='alert alert-success'>
+					// 			<p style='color:green'><span class='glyphicon glyphicon-cloud'> </span><strong>Fresh Air !</strong></p> 
+					//  		</div>";
+					// }
+					// elseif ($so2lv > $status || $no2lv > $status || $colv > $status || $pm25lv > $status ) {										
+					// 	echo "<div class='alert alert-danger'>
+					// 		<span class='glyphicon glyphicon-alert'></span> <strong>Danger!</strong>
+					// 		<audio controls autoplay><source src=\"sound.mp3\" type=\"audio/mpeg\"></audio>
+					//  		</div>";
+					// 	// echo "<audio controls resume><source src=\"sound.mp3\" type=\"audio/mpeg\"></audio>";					
+					// }
+					// elseif ($so2lv = $status || $no2lv = $status || $colv = $status || $pm25lv = $status) {
+					// 	if ($so2lv <= $status && $no2lv <= $status && $colv <= $status && $pm25lv <= $status) {
 
-							echo "<div class='alert alert-warning'>
-								<p style='color:orange'><span class='glyphicon glyphicon-warning-sign'></span><strong>Warning!</strong> Air pollution level 1</p>	
-					 		</div>";
+					// 		echo "<div class='alert alert-warning'>
+					// 			<p style='color:orange'><span class='glyphicon glyphicon-warning-sign'></span><strong>Warning!</strong> Air pollution level 1</p>	
+					//  		</div>";
 						
 							
-						}											
+					// 	}											
+					// }
+					if ($ssso2 < 50 && $ssno2 < 50 && $ssco < 50 && $ssppm25 < 50){
+						echo "<div class='alert alert-success'>
+								<p style='color:green'><span class='glyphicon glyphicon-cloud'></span> <strong>Chất lượng môi trường không khí trong lành !</strong></p> 
+					 		</div>";
 					}
-	
+					elseif ($ssso2 >300 || $ssno2 > 300 || $ssco > 300 || $ssppm25 > 300) {
+						
+						echo "<div class='alert alert-dark'>
+							<span class='glyphicon glyphicon-alert'></span> <strong>Nguy hiểm !</strong>
+							<audio controls autoplay><source src=\"sound.mp3\" type=\"audio/mpeg\"></audio>
+					 	</div>";
+															
+					}
+					elseif ($ssso2 > 50 || $ssno2 > 50 || $ssco > 50 || $ssppm25 > 50 ) {
+						if ($ssso2 < 100 && $ssno2 < 100 && $ssco < 100 && $ssppm25 < 100) {							
+							echo "<div class='alert alert-primary'>
+								<p style='color:blue'><span class='glyphicon glyphicon-cloud'></span> <strong>Chất lượng không khí trung bình</strong></p>	
+					 		</div>";
+						}																							
+					}
+					if ($ssso2 > 100 || $ssno2 > 100 || $ssco > 100 || $ssppm25 > 100 ) {
+						if ($ssso2 < 200 && $ssno2 < 200 && $ssco < 200 && $ssppm25 < 200) {
+							
+							echo "<div class='alert alert-warning'>
+							<span class='glyphicon glyphicon-alert'></span> <strong>Chất lượng không khí kém !</strong>
+							<audio controls autoplay><source src=\"canhbaocam.mp3\" type=\"audio/mpeg\"></audio>
+					 		</div>";
+						}																							
+					}
+					if ($ssso2 > 200 || $ssno2 > 200 || $ssco > 200 || $ssppm25 > 200 ) {
+						if ($ssso2 < 300 && $ssno2 < 300 && $ssco < 300 && $ssppm25 < 300) {
+							
+							echo "<div class='alert alert-danger'>
+							<span class='glyphicon glyphicon-alert'></span> <strong>Chất lượng không khí rẩt xấu !</strong>
+							<audio controls autoplay><source src=\"canhbaodo.mp3\" type=\"audio/mpeg\"></audio>
+					 		</div>";
+						}													
+					}
+
+
+
 ?>

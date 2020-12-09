@@ -27,5 +27,5 @@ function ajaxFunction(){
     }	   
     ajaxRequest.open("GET", "ajaxDiv.php");
     ajaxRequest.send(); 
-    setTimeout("ajaxFunction()",500);
+    setTimeout("ajaxFunction()",6000);
     }
